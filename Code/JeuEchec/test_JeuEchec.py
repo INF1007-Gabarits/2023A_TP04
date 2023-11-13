@@ -490,9 +490,9 @@ class TestJeuEchec(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    if not os.path.exists('Code/JeuEchec/logs'):
-        os.mkdir('Code/JeuEchec/logs')
-    with open('Code/JeuEchec/logs/tests_results_JeuEchec.txt', 'w') as f:
+    if not os.path.exists(os.path.dirname(os.path.realpath(__file__))+'/logs'):
+        os.mkdir(os.path.dirname(os.path.realpath(__file__))+'/logs')
+    with open(os.path.dirname(os.path.realpath(__file__))+'/logs/tests_results_JeuEchec.txt', 'w') as f:
         loader = unittest.TestLoader()
         suite = loader.loadTestsFromModule(sys.modules[__name__])
         unittest.TextTestRunner(f, verbosity=2).run(suite)

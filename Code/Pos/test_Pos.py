@@ -75,9 +75,9 @@ class TestPos(unittest.TestCase):
         self.assertFalse(pos1 == pos3)
 
 if __name__ == '__main__':
-    if not os.path.exists('Code/Pos/logs'):
-        os.mkdir('Code/Pos/logs')
-    with open('Code/Pos/logs/tests_results_Pos.txt', 'w') as f:
+    if not os.path.exists(os.path.dirname(os.path.realpath(__file__))+'/logs'):
+        os.mkdir(os.path.dirname(os.path.realpath(__file__))+'/logs')
+    with open(os.path.dirname(os.path.realpath(__file__))+'/logs/tests_results_Pos.txt', 'w') as f:
         loader = unittest.TestLoader()
         suite = loader.loadTestsFromModule(sys.modules[__name__])
         unittest.TextTestRunner(f, verbosity=2).run(suite)

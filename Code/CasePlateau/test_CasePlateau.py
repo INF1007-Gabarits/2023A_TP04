@@ -25,9 +25,9 @@ class TestCasePlateau(unittest.TestCase):
         self.assertTrue(case_occupee.est_occupe())
 
 if __name__ == '__main__':
-    if not os.path.exists('Code/CasePlateau/logs'):
-        os.mkdir('Code/CasePlateau/logs')
-    with open('Code/CasePlateau/logs/tests_results_CasePlateau.txt', 'w') as f:
+    if not os.path.exists(os.path.dirname(os.path.realpath(__file__))+'/logs'):
+        os.mkdir(os.path.dirname(os.path.realpath(__file__))+'/logs')
+    with open(os.path.dirname(os.path.realpath(__file__))+'/logs/tests_results_CasePlateau.txt', 'w') as f:
         loader = unittest.TestLoader()
         suite = loader.loadTestsFromModule(sys.modules[__name__])
         unittest.TextTestRunner(f, verbosity=2).run(suite)
