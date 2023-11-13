@@ -159,10 +159,10 @@ class Interface:
             if emplacement == piece['emplacement']:
                 img_res = pygame.transform.scale(self.pieces_png[piece['couleur'].name][piece['nom'].name], (35, 35))
                 if piece['couleur'].name == 'NOIR':
-                   self.SCREEN.blit(img_res, (740 + 30 * (self.pieces_perdues_noires % 6), 650 + (self.pieces_perdues_noires // 6) * 50))
+                   self.SCREEN.blit(img_res, (740 + 30 * (self.pieces_perdues_noires % 6), 540 + (self.pieces_perdues_noires // 6) * 50))
                    self.pieces_perdues_noires += 1
                 else:
-                   self.SCREEN.blit(img_res, (740 + 30 * (self.pieces_perdues_blanches % 6), 100 - (self.pieces_perdues_blanches // 6) * 50))
+                   self.SCREEN.blit(img_res, (740 + 30 * (self.pieces_perdues_blanches % 6), 150 - (self.pieces_perdues_blanches // 6) * 50))
                    self.pieces_perdues_blanches += 1
 
 
