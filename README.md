@@ -145,14 +145,14 @@ Initialise une instance de `Pos`. Si `ligne_emplacement_ind` est une chaîne, el
     *Propriété* qui calcule et retourne l'emplacement alphanumérique de la position basée sur les attributs `ligne` et `colonne`.   
    
    **Retour :**
-   Renvoie la chaîne de caractères représentant l'emplacement.
+   Renvoie la chaîne de caractères représentant l'emplacement (par exemple, "d2").
 
 4. <ins> **ind(self)** </ins> 
 
      Convertit une position en un indice linéaire, permettant une gestion facile des positions sur un plateau représenté par un tableau unidimensionnel ou des listes.
  
    **Retour :**
-   Renvoie l'indice permettant de se localiser sur le plateau 8x8.
+   Renvoie l'indice permettant de se localiser sur le plateau 8x8 (par exemple, la position 'c4' correspond à l'indice 36).
 
 6. <ins>  **__add__(self, addPos)** </ins> 
 
@@ -183,7 +183,7 @@ Initialise une instance de `Pos`. Si `ligne_emplacement_ind` est une chaîne, el
 
      
    **Retour :**
-   Renvoie la chaîne de caractères représentant l'instance `Pos`.
+   Renvoie la chaîne de caractères représentant l'instance `Pos`. (C'est-à-dire, "Ligne: X, Colonne: X, Emplacement: X", soit "Ligne: 4, Colonne: 3, Emplacement: c4" pour la position 'c2'.)
 
 
 ---
