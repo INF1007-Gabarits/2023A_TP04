@@ -183,7 +183,7 @@ Initialise une instance de `Pos`. Si `ligne_emplacement_ind` est une chaîne, el
 
      
    **Retour :**
-   Renvoie la chaîne de caractères représentant l'instance `Pos`. (C'est-à-dire, "Ligne: X, Colonne: X, Emplacement: X", soit "Ligne: 4, Colonne: 3, Emplacement: c4" pour la position 'c2'.)
+   Renvoie la chaîne de caractères représentant l'instance `Pos`. (C'est-à-dire, "Ligne: X, Colonne: X, Emplacement: X", soit "Ligne: 4, Colonne: 3, Emplacement: c4" pour la position 'c4'.)
 
 
 ---
