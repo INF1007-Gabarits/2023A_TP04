@@ -83,7 +83,7 @@ class Interface:
            liste_piece = self.liste_piece_to_render
 
         for piece in liste_piece:
-            self.SCREEN.blit(self.pieces_png[piece['couleur'].name][piece['nom'].name], \
+            self.SCREEN.blit(self.pieces_png[piece['couleur'].upper()][piece['type'].upper()], \
              ((ord(piece['emplacement'][0]) - 96) * self.blockSize - 70, int(piece['emplacement'][1]) * self.blockSize - self.blockSize))
         # HACK: to rerender the piece after displaying the cursor since I don't want to have to play with sprite layers!
         self.liste_piece_to_render = liste_piece
@@ -157,8 +157,8 @@ class Interface:
 
         for piece in self.liste_piece_to_render:
             if emplacement == piece['emplacement']:
-                img_res = pygame.transform.scale(self.pieces_png[piece['couleur'].name][piece['nom'].name], (35, 35))
-                if piece['couleur'].name == 'NOIR':
+                img_res = pygame.transform.scale(self.pieces_png[piece['couleur'].upper()][piece['type'].upper()], (35, 35))
+                if piece['couleur'].upper() == 'NOIR':
                    self.SCREEN.blit(img_res, (740 + 30 * (self.pieces_perdues_noires % 6), 540 + (self.pieces_perdues_noires // 6) * 50))
                    self.pieces_perdues_noires += 1
                 else:
